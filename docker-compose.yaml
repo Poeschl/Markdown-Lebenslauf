@@ -1,0 +1,16 @@
+version: "3"
+services:
+  cv-gen:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Change this line to your folder location of the input.
+      - ./sample:/workspace
+    environment:
+      # Adjust this names to your liking and environment. (The folder is determined by the volume mounts)
+      INPUT_MARKDOWN_FILE: /workspace/sample.md
+      INPUT_MEDIA_FOLDER: /workspace/media
+      OUTPUT_PDF_FILE: /workspace/cv.pdf
+      # Additional fonts to install. (List required ubuntu font packages here.)
+      #FONTS: "fonts-dejavu fonts-roboto"

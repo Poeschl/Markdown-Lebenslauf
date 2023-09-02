@@ -1,0 +1,140 @@
+$accent-color: #770b0b;
+$page-padding-left: 10mm;
+$page-padding-right: 15mm;
+
+
+@font-face {
+  font-family: Roboto;
+  src: url('/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Bold.ttf');
+  font-weight: bold;
+}
+
+@page {
+  size: A4;
+  margin: 10mm 0;
+
+  @bottom-right {
+    margin-bottom: 4mm;
+    margin-right: 4mm;
+    padding: 0;
+    content: counter(page) "/" counter(pages) ;
+  }
+}
+
+@page :first {
+  margin-top: 0;
+}
+
+@media screen {
+  html {
+    background-color: #ababab;
+  }
+}
+
+html {
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 14px;
+  color: #000000;
+}
+
+body {
+  width: 210mm - $page-padding-left - $page-padding-right;
+  margin: 0 auto 0 auto;
+  background: #FFFFFF;
+  padding: 2rem $page-padding-right 2rem $page-padding-left;
+  position: relative;
+}
+
+/* Hide markdown metadata */
+.date {
+  display: none;
+}
+
+/* Hide markdown metadata */
+.author {
+  display: none;
+}
+
+.picture {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 230px;
+}
+
+h1.title {
+  background-color: $accent-color;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: $page-padding-left;
+  width: 30%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+section {
+  padding-top: 0.6rem;
+  padding-bottom: 0.8rem;
+
+  &:first-of-type {
+    margin-top: 2.5rem;
+    background-color: #650A0A0C;
+    width: auto;
+    margin-left: -$page-padding-left;
+    margin-right: -$page-padding-right;
+    padding-left: $page-padding-left;
+    padding-right: $page-padding-right;
+  }
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: .8rem;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > dt, & > dd {
+    margin: 0 0 0.8rem;
+  }
+
+  & > dt {
+    width: 36%;
+    font-weight: bold;
+  }
+
+  & > dd {
+    width: 64%;
+  }
+}
+
+ul, p {
+  margin-top: .2rem;
+  margin-bottom: .4rem;
+}
+
+a {
+  text-decoration: none;
+  color: darken($accent-color, 0.2);
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: lighten($accent-color, 0.6);
+  }
+}
