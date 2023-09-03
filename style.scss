@@ -89,7 +89,7 @@ section {
 
   &:first-of-type {
     margin-top: 2.5rem;
-    background-color: #650A0A0C;
+    background-color: transparentize($accent-color, 0.9);
     width: auto;
     margin-left: -$page-padding-left;
     margin-right: -$page-padding-right;
