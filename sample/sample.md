@@ -19,10 +19,13 @@ Adresse
 10411 Berlin
 
 Telefon
-: 0176 123456789
+: [0176 123456789](tel:+49176123456789)
 
 E-Mail
-: example@mail.mail
+: [example@mail.mail](mailto:example@mail.mail)
+
+Webseite
+: [my-own.page](https://my-own.page)
 
 ## Berufserfahrung
 
